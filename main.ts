@@ -6,6 +6,8 @@
 //
 // Writes one single-line code review comment that approves a pull request
 // while carrying quiet existential dread to /output/entry.txt.
+// The entry itself stays flat and understated on purpose: the approval is
+// real, the dread is in the hurry to merge before remembering why.
 
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
