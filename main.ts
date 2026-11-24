@@ -4,6 +4,16 @@
 // flattest tired-engineer voice; dread sits in the casual "before I remember"
 // without flourish.
 //
+// The entry is a single-line code review comment: "LGTM. Merging now, before
+// I remember why we wrote it this way." It approves the pull request while
+// carrying quiet existential dread — the approval is real, the dread is in
+// the hurry to merge before remembering why the code was written that way.
+// Gate rules enforced here: entry must be non-empty, not whitespace-only,
+// with no leading/trailing whitespace, a single line, and 1..140 characters
+// with no control characters. main() validates, writes entry.txt, then does
+// a round-trip read and throws unless the file on disk is byte-identical to
+// the in-memory text, so a silent write failure can never pass the gate.
+//
 // Writes one single-line code review comment that approves a pull request
 // while carrying quiet existential dread to /output/entry.txt.
 // The entry itself stays flat and understated on purpose: the approval is
